@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | News homepage</title>
+
+  <link rel="stylesheet" href="./css/index.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { margin-top: 32px; margin-bottom: 16px; font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <img class="logo" src="./assets/images/logo.svg" alt="logo" />
+      <img class="menu-icon" id="menu-icon" src="./assets/images/icon-menu.svg" alt="menu-icon" />
+      <!-- Navigation -->
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>New</li>
+          <li>Popular</li>
+          <li>Trending</li>
+          <li>Categories</li>
+        </ul>
+      </nav>
+      <!-- end of Navigation -->
+      <!-- Sidebar -->
+        <div class="sidebar-overlay display-none" id="sidebar">
+          <div class="sidebar">
+            <img id="close-menu-icon" class="menu-close-icon" src="./assets/images/icon-menu-close.svg" alt="menu close icon">
+            <ul>
+                <li>Home</li>
+                <li>New</li>
+                <li>Popular</li>
+                <li>Trending</li>
+                <li>Categories</li>
+            </ul>
+          </div>
+        </div>
+      <!-- end of Sidebar -->
+    </div>
+  </header> 
+  <!-- end of Header -->
+
+  <div class="container hero-news">
+    <!-- Hero -->
+    <div class="hero">
+        <img class="hero-image web3-image-mobile" width="100%" src="./assets/images/image-web-3-mobile.jpg" alt="web3-illustration">
+        <img class="hero-image web3-image-desktop" width="100%" src="./assets/images/image-web-3-desktop.jpg" alt="web3-illustration">
+        <h1 class="title">The Bright Future of Web 3.0?</h1>
+        <p class="hero-desc">We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
+        <button type="button" class="cta-btn">Read more</button>
+    </div>
+    <!-- end of Hero -->
+
+    <!-- News -->
+    <aside class="news">
+      <h2 class="title">New</h2>
+      <div class="news-list">
+        <div class="news-item">
+          <h3 class="news-title">Hydrogen VS Electric Cars</h3>
+          <div class="news-desc">Will hydrogen-fueled cars ever catch up to EVs?</div>
+        </div>
+        <hr/>
+        <div class="news-item">
+          <h3 class="news-title">The Downsides of AI Artistry</h3>
+          <div class="news-desc">What are the possible adverse effects of on-demand AI image generation?</div>
+        </div>
+        <hr/>
+        <div class="news-item">
+          <h3 class="news-title">Is VC Funding Drying Up?</h3>
+          <div class="news-desc"> Private funding by VC firms is down 50% YOY. We take a look at what that means.</div>
+        </div>
+      </div>
+    </aside>
+    <!-- end of News -->
+  </div>
+  
+  <!-- Main -->
+  <main class="top-news">
+    <div class="container">
+      <div class="top-news-item">
+        <img class="top-news-image" src="./assets/images/image-retro-pcs.jpg" alt="retro pc" width="100%" loading="lazy" />
+        <div class="news-details">
+          <div class="order">01</div>
+          <h3 class="top-news-title">Reviving Retro PCs</h3>
+          <p class="top-news-desc">What happens when old PCs are given modern upgrades?</p>
+        </div>
+      </div>
+      <div class="top-news-item">
+        <img class="top-news-image" src="./assets/images/image-top-laptops.jpg" alt="top laptop" width="100%" loading="lazy" />
+        <div class="news-details">
+          <div class="order">02</div>
+          <h3 class="top-news-title">Top 10 Laptops of 2022</h3>
+          <p class="top-news-desc">Our best picks for various needs and budgets.</p>
+        </div>
+      </div>
+      <div class="top-news-item">
+        <img class="top-news-image" src="./assets/images/image-gaming-growth.jpg" alt="growth gaming" width="100%" loading="lazy" />
+        <div class="news-details">
+          <div class="order">03</div>
+          <h3 class="top-news-title">The Growth of Gaming</h3>
+          <p class="top-news-desc">How the pandemic has sparked fresh opportunities.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- end of Main -->
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://izzuzantyaf.space" target="_blank" rel="noopener noreferrer">Izzu Z. Fawwas</a>.
+  </div>
+
+  <script>
+    const menuBtn = document.getElementById('menu-icon')
+    const closeMenuBtn = document.getElementById('close-menu-icon')
+    const sidebar = document.getElementById('sidebar')
+
+    menuBtn.addEventListener('click', function() {
+      sidebar.classList.remove('display-none')
+      sidebar.classList.add('display-block')
+    })
+    closeMenuBtn.addEventListener('click', function() {
+      sidebar.classList.remove('display-block')
+      sidebar.classList.add('display-none')
+    })
+  </script>
+</body>
+</html>
